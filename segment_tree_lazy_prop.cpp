@@ -12,7 +12,7 @@ private:
     void prop(){
         if(lazy==0) return;
         sum+=((r-l)+1)*lazy;
-        if(l!=r) Left->lazy=lazy, Right->lazy=lazy;
+        if(l!=r) Left->lazy+=lazy, Right->lazy+=lazy;
         lazy=0;
     }
 
